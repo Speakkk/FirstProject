@@ -1,0 +1,28 @@
+#login{
+	
+	margin:250px auto;
+	width:400px;
+	height:170px;
+	padding:15px;
+	Background-color:#CECECE;
+	min-height:100px;
+	overflow:hidden;
+	border:1px solid black;
+	text-align:center;
+}
+
+
+.but_profile{
+	margin-left:2px;
+	display:inline;
+}
+
+
+#slider{
+	width:200px;
+}
+
+#slider_value{
+	width:200px;
+	text-align:center;
+}
