@@ -1,6 +1,3 @@
-﻿<?php 
-include ("bd.php");
-?>
 <html>
 <head>
 <title> Главная страница </title>
@@ -13,11 +10,11 @@ include ("bd.php");
 	<div id="login">
 		<div id="autoform">
 			<form action=authorize.php method=post> 
-	Логин:<br>
-	<input type="text" name="admin"><br>
-	Пароль:<br>
-	<input type="password" name="password"><br>
-	<input type="submit" name="sumbit" value="Войти" class="btn btn-success">
+				Логин:<br>
+				<input type="text" name="admin"><br>
+				Пароль:<br>
+				<input type="password" name="password"><br>
+				<input type="submit" name="sumbit" value="Войти" class="btn btn-success">
 			</form>
 		</div>
 	</div>

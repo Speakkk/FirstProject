@@ -9,12 +9,12 @@
 	<select name="users">
 	<?php
 	include ("bd.php");
-$result =  mysql_query ("SELECT * FROM users") or die(mysql_error());
-while ($row = mysql_fetch_array($result)){
 
-echo "<option value='".$row['id']."'>".$row['admin']."</option>";
+$statement = $db->query('SELECT * FROM users');
+ 
+while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+   echo "<option value='".$row['id']."'>".$row['admin']."</option>";
 }
-
  
 ?>
 	</select>
