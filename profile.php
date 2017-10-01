@@ -19,15 +19,17 @@ else
 	<body>
 		<h1>Мой профиль (<b><?=$user?>)</h1>
 	<div id="login">
-		<div class="but_profile">
-		<form action="registration.php" method="post">
-		<input type="submit" name="add_user" value="Добавить пользователя" class="btn btn-success" style="width:175px">
-		</form>
+		<div class="button_profile">
+			<form action="registration.php" method="post">
+				<input type="submit" name="add_user" value="Добавить пользователя" class="btn btn-success" style="width:175px">
+			</form>
 		</div>
-		<div class="but_profile">
-		<a href="deleteuser_form.php" class="btn btn-success">Удалить пользователя</a>
+		<div class="button_profile">
+				<a href="deleteuser_form.php" class="btn btn-success">Удалить пользователя</a>
+		</div>
+		<div class="button_profile">
+				<a href="calculator_form.php" class="btn btn-success">Калькулятор</a>
 		</div>
 	</div>
-		</form>
 </body>
 </html>

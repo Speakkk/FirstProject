@@ -12,9 +12,10 @@
 }
 
 
-.but_profile{
-	margin-left:2px;
-	display:inline;
+.button_profile {
+	margin: 10px;
+	
+
 }
 
 
@@ -25,4 +26,14 @@
 #slider_value{
 	width:200px;
 	text-align:center;
+}
+
+#calculator{
+	text-align:center;
+	margin:250px auto;
+	width:500px;
+	border:3px solid #00CC00;
+	padding: 5 0 0 20;
+	border-width:thin;
+	outline: 5px solid #e3e3e3;
 }
