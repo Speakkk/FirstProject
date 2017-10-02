@@ -114,12 +114,24 @@
 		}else{
 			echo 'invalid' . implode(', ', $fails);
 		}
-			if($rate_type == "0"){
-				$month_pay = $amount * (($rate/100)/(1-pow((1+$rate/100),-$term)));
+			if($rate_type == "0" ){ //Месяцев
+
+				if($term_type == "1"){
+					$term = $term * 12;
+					
+				}
+				$month_pay = $amount * (($rate/100)/(1-pow((1+$rate/100),-$term)));  
 			}
-			if($rate_type == "1"){
+
+			if($rate_type == "1"){ // Годовая
+				if($term_type == "1" ){		
+					$term = $term*12;
+				}
 				$month_pay = $amount * (($rate/100/12)/(1-pow((1+$rate/100/12),-$term)));
+
 			}
+
+
 
  		echo "Ваш ежемесячный платеж:", " ", round($month_pay, 2) , " ", "тенге" ; 
  		echo '<br/>';
