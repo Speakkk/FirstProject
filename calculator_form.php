@@ -104,6 +104,14 @@
 				$fails[]='term';
 			}
 
+			if(!is_numeric($rate_type)){
+				$fails[]='rate_type';
+			}
+
+			if(!is_numeric($term_type)){
+				$fails[]='term_type';
+			}
+
 			if(!count($fails)){
 
 			$amount = $initial_fee > 0 
@@ -128,9 +136,7 @@
 					$term = $term*12;
 				}
 				$month_pay = $amount * (($rate/100/12)/(1-pow((1+$rate/100/12),-$term)));
-
 			}
-
 
 
  		echo "Ваш ежемесячный платеж:", " ", round($month_pay, 2) , " ", "тенге" ; 
@@ -138,13 +144,24 @@
  		$overpayment_amount = $month_pay * $term;
 
  		echo "Размер переплаты:", " ", round($overpayment_amount, 2), " ", "тенге";
- 		/*var_dump($cost);
- 		var_dump($initial_fee);
- 		var_dump($amount);
- 		var_dump($rate);
- 		var_dump($term);*/
+
 		?> 
 	</div>
 </div>
+<div id="calculation_results">
+		<table>
+			<thead>Вывод:</thead>
+			<tbody>
+			<?php
+			for($i = 1; $i <= $term; $i++){ 
+			echo "<br> $i : " ,round($month_pay, 2);
+			echo'<br>';
+			}		
+			echo '<br> Итог:', round($overpayment_amount, 2);	
+			?>
+
+			</tbody>
+		</table>
+	</div>
 </body>
 </html>
